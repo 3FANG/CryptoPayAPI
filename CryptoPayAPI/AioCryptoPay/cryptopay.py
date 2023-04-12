@@ -95,7 +95,7 @@ class AioCryptoPay(BaseCryptoPay):
             if type(invoice_ids) == int:
                 invoice_ids = str(invoice_ids)
 
-        params = self._get_params(locals(), "createInvoice")
+        params = self._get_params(locals(), "getInvoices")
 
         response = await self._make_request(
             "getInvoices",
